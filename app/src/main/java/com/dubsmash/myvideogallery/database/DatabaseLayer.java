@@ -17,6 +17,7 @@ public class DatabaseLayer extends SQLiteOpenHelper{
     private static final String SQL_CREATE_ENTRIES =
             "CREATE TABLE " + VideoDatabaseEntries.TABLE_NAME + " (" +
                     VideoDatabaseEntries._ID + " INTEGER PRIMARY KEY," +
+                    VideoDatabaseEntries.COLUMN_NAME_VIDEO_TITLE + " TEXT," +
                     VideoDatabaseEntries.COLUMN_NAME_TIME + " LONG," +
                     VideoDatabaseEntries.COLUMN_NAME_VIDEO_PATH + " TEXT," +
                     VideoDatabaseEntries.COLUMN_NAME_DURATION + " LONG)";
@@ -49,6 +50,7 @@ public class DatabaseLayer extends SQLiteOpenHelper{
 
     public static class VideoDatabaseEntries implements BaseColumns {
         public static final String TABLE_NAME = "videos";
+        public static final String COLUMN_NAME_VIDEO_TITLE = "video_title";
         public static final String COLUMN_NAME_TIME = "time";
         public static final String COLUMN_NAME_DURATION = "duration";
         public static final String COLUMN_NAME_VIDEO_PATH = "video_path";

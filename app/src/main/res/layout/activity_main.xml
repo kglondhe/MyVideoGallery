@@ -6,6 +6,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.dubsmash.myvideogallery.activity.MainActivity">
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/videosRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/captureVideoFloatingActionButton"
         android:layout_width="wrap_content"

@@ -6,9 +6,18 @@ package com.dubsmash.myvideogallery.model;
 
 public class VideoInformation {
 
+    private String videoTitle;
     private long time;
     private long duration;
     private String path;
+
+    public String getVideoTitle() {
+        return videoTitle;
+    }
+
+    public void setVideoTitle(String videoTitle) {
+        this.videoTitle = videoTitle;
+    }
 
     public long getTime() {
         return time;

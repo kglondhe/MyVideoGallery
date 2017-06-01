@@ -22,6 +22,7 @@ public class DatabaseUtil {
         contentValues.put(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_TIME,videoInformation.getTime());
         contentValues.put(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_DURATION,videoInformation.getDuration());
         contentValues.put(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_VIDEO_PATH,videoInformation.getPath());
+        contentValues.put(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_VIDEO_TITLE,videoInformation.getVideoTitle());
 
         sqLiteDatabase.insert(DatabaseLayer.VideoDatabaseEntries.TABLE_NAME,null,contentValues);
     }
@@ -32,7 +33,8 @@ public class DatabaseUtil {
         final String[] projection = {
                 DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_TIME,
                 DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_DURATION,
-                DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_VIDEO_PATH
+                DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_VIDEO_PATH,
+                DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_VIDEO_TITLE
         };
 
         final Cursor cursor = sqLiteDatabase.query(DatabaseLayer.VideoDatabaseEntries.TABLE_NAME,projection,null,null,null,null,null);
@@ -43,6 +45,7 @@ public class DatabaseUtil {
             videoInformation.setTime(cursor.getLong(cursor.getColumnIndex(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_TIME)));
             videoInformation.setDuration(cursor.getLong(cursor.getColumnIndex(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_DURATION)));
             videoInformation.setPath(cursor.getString(cursor.getColumnIndex(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_VIDEO_PATH)));
+            videoInformation.setVideoTitle(cursor.getString(cursor.getColumnIndex(DatabaseLayer.VideoDatabaseEntries.COLUMN_NAME_VIDEO_TITLE)));
             videoInformations.add(videoInformation);
         }
         cursor.close();

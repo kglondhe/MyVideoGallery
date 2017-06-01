@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">My Video Gallery</string>
+    <string name="default_name">My awesome video</string>
+    <string name="btn_record">Record</string>
+    <string name="enter_video_title">Enter a desired title for your video</string>
+
+    <string name="title_activity_video">VideoActivity</string>
+    <string name="permission_warning">Not allowed</string>
+
 </resources>
