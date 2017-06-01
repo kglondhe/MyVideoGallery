@@ -26,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="@dimen/margin_small"
             android:layout_toRightOf="@id/video_thumbnail"
             android:gravity="center_vertical"
             android:orientation="vertical">
